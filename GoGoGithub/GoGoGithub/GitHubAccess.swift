@@ -8,5 +8,5 @@
 
 import Foundation
 
-let gitHubClientID = "b3dd1203cd38fe1a3e8f"
-let gitHubClientSecret = "b2875f0c807f43b73a95dc6913f27f3187b09fe5"
+let kGitHubClientID = "b3dd1203cd38fe1a3e8f"
+let kGitHubClientSecret = "b2875f0c807f43b73a95dc6913f27f3187b09fe5"
