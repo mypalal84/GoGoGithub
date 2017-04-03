@@ -14,6 +14,7 @@
 		7FE9DB961E92C9180068B2A3 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB951E92C9180068B2A3 /* GitHub.swift */; };
 		7FE9DB981E92CE690068B2A3 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */; };
 		7FE9DB9A1E92EC1D0068B2A3 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB991E92EC1D0068B2A3 /* FoundationExtensions.swift */; };
+		7FE9DB9C1E92FCA40068B2A3 /* GitHubAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7FE9DB951E92C9180068B2A3 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		7FE9DB991E92EC1D0068B2A3 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */,
 				7FE9DB951E92C9180068B2A3 /* GitHub.swift */,
 				7FE9DB801E92B07D0068B2A3 /* AppDelegate.swift */,
+				7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				7FE9DB961E92C9180068B2A3 /* GitHub.swift in Sources */,
 				7FE9DB981E92CE690068B2A3 /* GitHubAuthController.swift in Sources */,
 				7FE9DB811E92B07D0068B2A3 /* AppDelegate.swift in Sources */,
+				7FE9DB9C1E92FCA40068B2A3 /* GitHubAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
