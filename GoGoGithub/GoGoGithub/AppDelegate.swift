@@ -23,7 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let code = try? GitHub.shared.getCodeFrom(url: url)
         
-        print(code)
+        print(code ?? "No Code :/")
+        
+        GitHub.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
+            if success {
+                print("Yay!! Access token :)")
+            } else {
+                print("Bummer!! No success :(")
+            }
+        }
         
         return true
     }
