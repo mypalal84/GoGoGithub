@@ -34,7 +34,7 @@ class GitHub {
         
         print("Parameter String: \(parametersString)")
         
-        if let requestURL = URL(string: "\(kOAuthBaseURLString)authorize?client_id=\(gitHubClientID)\(parametersString)") {
+        if let requestURL = URL(string: "\(kOAuthBaseURLString)authorize?client_id=\(kGitHubClientID)\(parametersString)") {
             
             print(requestURL.absoluteString)
             
@@ -64,7 +64,7 @@ class GitHub {
     do{
         let code = try self.getCodeFrom(url: url)
             
-        let requestString = "\(kOAuthBaseURLString)access_token?client_id=\(gitHubClientID)&client_secret=\(gitHubClientSecret)&code=\(code)"
+        let requestString = "\(kOAuthBaseURLString)access_token?client_id=\(kGitHubClientID)&client_secret=\(kGitHubClientSecret)&code=\(code)"
         
         if let requestURL = URL(string: requestString) {
             
