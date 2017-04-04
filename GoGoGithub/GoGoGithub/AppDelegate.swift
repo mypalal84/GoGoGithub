@@ -12,28 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    var gvc = GitHubAuthController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
     
+    //only being called when coming back from a 3rd party url
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
         let code = try? GitHub.shared.getCodeFrom(url: url)
         
         print(code ?? "No Code :/")
-        
+        //check if access token is already saved
+        //if not, request it
         let accessToken = UserDefaults.standard.getAccessToken()
         
         if accessToken == nil {
-            
             GitHub.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
                 if success {
-                    
                     print("Yay!! Access token :)")
-                    
                 } else {
                     print("Bummer!! No success :(")
                 }

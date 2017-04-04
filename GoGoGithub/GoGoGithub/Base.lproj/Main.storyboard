@@ -47,6 +47,17 @@
                                     <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2H-al-5gI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-Gy-aGc">
+                                <rect key="frame" x="161.5" y="537" width="51" height="27"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6x-X9-zgo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -54,10 +65,15 @@
                             <constraint firstItem="wJI-bA-Mil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="BGY-hQ-Gaw"/>
                             <constraint firstAttribute="trailing" secondItem="wJI-bA-Mil" secondAttribute="trailing" constant="16" id="FoP-i3-c5l"/>
                             <constraint firstAttribute="trailing" secondItem="bpa-tY-ZQZ" secondAttribute="trailing" constant="16" id="L7I-6h-kFf"/>
+                            <constraint firstItem="wJI-bA-Mil" firstAttribute="top" secondItem="S1x-Gy-aGc" secondAttribute="bottom" constant="8" id="MpB-aD-zlq"/>
+                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k1h-1M-QVA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wJI-bA-Mil" secondAttribute="bottom" constant="20" id="qI7-be-usU"/>
                             <constraint firstItem="bpa-tY-ZQZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="v4i-K5-QPU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="wJI-bA-Mil" id="dwV-Jh-tXi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,14 +17,17 @@ enum GitHubAuthError: Error {
 }
 
 enum SaveOptions {
-    //empty dictionary persists like local storage
+    
+    //empty dictionary, persists like local storage
     case userDefaults
 }
 
+//singleton
 class GitHub {
     
     static let shared = GitHub()
     
+    //requesting OAuth, opens login window
     func oAuthRequestWith(parameters: [String : String]) {
         var parametersString = ""
         
@@ -42,6 +45,7 @@ class GitHub {
         }
     }
     
+    //get github code from url
     func getCodeFrom(url: URL) throws -> String {
         
         guard let code = url.absoluteString.components(separatedBy: "=").last else {
@@ -52,6 +56,7 @@ class GitHub {
         
     }
     
+    //request OAuth token using url, code, clientid, and clientsecret
     func tokenRequestFor(url: URL, saveOptions: SaveOptions, completion: @escaping GitHubOAuthCompletion) {
         
         func complete(success: Bool) {
@@ -79,13 +84,16 @@ class GitHub {
                     if let dataString = String(data: data, encoding: .utf8) {
                         print(dataString)
                         
+                        //save access token to userdefaults
+                        if UserDefaults.standard.save(accessToken: dataString) {
+                            print("Saved successfully")
+                            
+                        }
                         complete(success: true)
                         
                     }
                 }) .resume()//tells datatask to execute. most common bug in production(no feedback) have to do this!
-                if UserDefaults.standard.save(accessToken: code) {
-                    print("Saved successfully")
-                }
+
             }
         } catch {
             print(error)
