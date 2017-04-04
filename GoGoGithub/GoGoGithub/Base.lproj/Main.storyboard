@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,21 +35,8 @@
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jec-hN-e7h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-tY-ZQZ">
-                                <rect key="frame" x="16" y="308" width="343" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hAt-Ra-8Il"/>
-                                </constraints>
-                                <state key="normal" title="PRINT TOKEN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2H-al-5gI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-Gy-aGc">
-                                <rect key="frame" x="161.5" y="537" width="51" height="27"/>
+                                <rect key="frame" x="126" y="489" width="123" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="LOGOUT">
@@ -58,17 +46,41 @@
                                     <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6x-X9-zgo"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="F9j-xh-SPA">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PzE-Ou-NIO"/>
+                                    <constraint firstAttribute="width" constant="200" id="Y6z-jK-0Tw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-tY-ZQZ">
+                                <rect key="frame" x="16" y="80" width="343" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PRINT TOKEN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2H-al-5gI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Ug-lL-RjY"/>
+                            <constraint firstItem="F9j-xh-SPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0RB-qr-muF"/>
+                            <constraint firstAttribute="trailing" secondItem="bpa-tY-ZQZ" secondAttribute="trailing" constant="16" id="55o-3m-vWa"/>
+                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="height" secondItem="wJI-bA-Mil" secondAttribute="height" id="5qL-4s-osb"/>
                             <constraint firstItem="wJI-bA-Mil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="BGY-hQ-Gaw"/>
                             <constraint firstAttribute="trailing" secondItem="wJI-bA-Mil" secondAttribute="trailing" constant="16" id="FoP-i3-c5l"/>
-                            <constraint firstAttribute="trailing" secondItem="bpa-tY-ZQZ" secondAttribute="trailing" constant="16" id="L7I-6h-kFf"/>
-                            <constraint firstItem="wJI-bA-Mil" firstAttribute="top" secondItem="S1x-Gy-aGc" secondAttribute="bottom" constant="8" id="MpB-aD-zlq"/>
-                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k1h-1M-QVA"/>
+                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="110" id="GgX-uu-xZV"/>
+                            <constraint firstItem="F9j-xh-SPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IPs-4b-IVv"/>
+                            <constraint firstItem="F9j-xh-SPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YCC-tR-wxl"/>
+                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="f9U-I2-Ob5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S1x-Gy-aGc" secondAttribute="trailing" constant="110" id="hXx-cV-afU"/>
+                            <constraint firstItem="wJI-bA-Mil" firstAttribute="top" secondItem="S1x-Gy-aGc" secondAttribute="bottom" constant="8" id="kw3-PS-t5y"/>
+                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="height" secondItem="S1x-Gy-aGc" secondAttribute="height" id="m3I-Tz-wl8"/>
+                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="pU1-et-Xa0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wJI-bA-Mil" secondAttribute="bottom" constant="20" id="qI7-be-usU"/>
-                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="v4i-K5-QPU"/>
+                            <constraint firstItem="F9j-xh-SPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="reN-bh-ezI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -98,4 +110,7 @@
             <point key="canvasLocation" x="964" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github_logo.png" width="1000" height="750"/>
+    </resources>
 </document>
