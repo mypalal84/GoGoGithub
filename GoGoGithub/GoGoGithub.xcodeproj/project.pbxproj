@@ -15,6 +15,9 @@
 		7FE9DB981E92CE690068B2A3 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */; };
 		7FE9DB9A1E92EC1D0068B2A3 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB991E92EC1D0068B2A3 /* FoundationExtensions.swift */; };
 		7FE9DB9C1E92FCA40068B2A3 /* GitHubAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */; };
+		7FE9DB9E1E940C100068B2A3 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */; };
+		7FE9DBA01E940D5D0068B2A3 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB9F1E940D5D0068B2A3 /* UIExtensions.swift */; };
+		7FE9DBA21E94195E0068B2A3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA11E94195E0068B2A3 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		7FE9DB991E92EC1D0068B2A3 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAccess.swift; sourceTree = "<group>"; };
+		7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		7FE9DB9F1E940D5D0068B2A3 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		7FE9DBA11E94195E0068B2A3 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +78,9 @@
 		7FE9DB921E92B14D0068B2A3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */,
-				7FE9DB951E92C9180068B2A3 /* GitHub.swift */,
 				7FE9DB801E92B07D0068B2A3 /* AppDelegate.swift */,
+				7FE9DB951E92C9180068B2A3 /* GitHub.swift */,
+				7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */,
 				7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */,
 			);
 			name = Controllers;
@@ -85,6 +91,7 @@
 			children = (
 				7FE9DB891E92B07D0068B2A3 /* LaunchScreen.storyboard */,
 				7FE9DB841E92B07D0068B2A3 /* Main.storyboard */,
+				7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -92,6 +99,8 @@
 		7FE9DB941E92B1550068B2A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7FE9DBA11E94195E0068B2A3 /* Repository.swift */,
+				7FE9DB9F1E940D5D0068B2A3 /* UIExtensions.swift */,
 				7FE9DB991E92EC1D0068B2A3 /* FoundationExtensions.swift */,
 			);
 			name = Models;
@@ -171,7 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FE9DB9A1E92EC1D0068B2A3 /* FoundationExtensions.swift in Sources */,
+				7FE9DBA01E940D5D0068B2A3 /* UIExtensions.swift in Sources */,
 				7FE9DB961E92C9180068B2A3 /* GitHub.swift in Sources */,
+				7FE9DBA21E94195E0068B2A3 /* Repository.swift in Sources */,
+				7FE9DB9E1E940C100068B2A3 /* RepoViewController.swift in Sources */,
 				7FE9DB981E92CE690068B2A3 /* GitHubAuthController.swift in Sources */,
 				7FE9DB811E92B07D0068B2A3 /* AppDelegate.swift in Sources */,
 				7FE9DB9C1E92FCA40068B2A3 /* GitHubAccess.swift in Sources */,
@@ -340,6 +352,7 @@
 				7FE9DB911E92B07D0068B2A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

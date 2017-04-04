@@ -12,6 +12,8 @@ let kOAuthBaseURLString = "https://github.com/login/oauth/"
 
 typealias GitHubOAuthCompletion = (Bool) -> ()
 
+typealias FetchReposCompletion = ([Repository]?) -> ()
+
 enum GitHubAuthError: Error {
     case extractingCode
 }
@@ -25,7 +27,26 @@ enum SaveOptions {
 //singleton
 class GitHub {
     
+    private var session: URLSession
+    private var components: URLComponents
+    
     static let shared = GitHub()
+    
+    //true singleton
+    private init() {
+        
+        self.session = URLSession(configuration: .default)
+        self.components = URLComponents()
+        
+        self.components.scheme = "https"
+        self.components.host = "api.github.com"
+        
+        if let token = UserDefaults.standard.getAccessToken() {
+            let queryItem = URLQueryItem(name: "access_token", value: token)
+            self.components.queryItems = [queryItem]
+        }
+        
+    }
     
     //requesting OAuth, opens login window
     func oAuthRequestWith(parameters: [String : String]) {
@@ -82,15 +103,13 @@ class GitHub {
                     guard let data = data else { complete(success: false); return }
                     
                     if let dataString = String(data: data, encoding: .utf8) {
-                        print(dataString)
                         
-                        //save access token to userdefaults
-                        if UserDefaults.standard.save(accessToken: dataString) {
-                            print("Saved successfully")
+                            //save access token to userdefaults
+                            if let token = self.accessTokenFrom(dataString) {
+                               complete(success: UserDefaults.standard.save(accessToken: token))
                             
+                                print("Saved successfully")
                         }
-                        complete(success: true)
-                        
                     }
                 }) .resume()//tells datatask to execute. most common bug in production(no feedback) have to do this!
 
@@ -103,6 +122,68 @@ class GitHub {
         
     }
     
+    func accessTokenFrom(_ string: String) -> String? {
+        print(string)
+        
+        if string.contains("access_token") {
+            
+            let components = string.components(separatedBy: "&")
+            
+            for component in components {
+                print(component)
+                if component.contains("access_token") {
+                    let token = component.components(separatedBy: "=").last
+                    
+                    return token
+                }
+            }
+        }
+        return nil
+    }
+    
+    func getRepos(completion: @escaping FetchReposCompletion) {
+        
+        //return to main queue
+        func returnToMain(results: [Repository]?) {
+            OperationQueue.main.addOperation {
+                completion(results)
+            }
+        }
+        
+        self.components.path = "/user/repos"
+        
+        guard let url = self.components.url else { returnToMain(results: nil); return }
+        
+        self.session.dataTask(with: url) { (data, response, error) in
+            
+            if error != nil { returnToMain(results: nil); return }
+            
+            if let data = data {
+                
+                var repositories = [Repository]()
+                
+                do {
+                    if let rootJson = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String: Any]] {
+                        
+                        for repositoryJSON in rootJson {
+                            if let repo = Repository(json: repositoryJSON) {
+                                repositories.append(repo)
+                            }
+                        }
+                        
+                        returnToMain(results: repositories)
+                    }
+                    
+                } catch {
+                    
+                }
+                
+            }
+            
+        } .resume()
+        
+        
+    }
     
 }
 

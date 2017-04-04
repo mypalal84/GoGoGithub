@@ -12,11 +12,42 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var gvc = GitHubAuthController()
+    var authController : GitHubAuthController?
+    var repoController : RepoViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let token = UserDefaults.standard.getAccessToken() {
+            print(token)
+        } else {
+            presentAuthContoller()
+        }
+        
         return true
+    }
+    
+    //do we have a token? if so, fire off the repoviewcontroller. if not, authviewcontroller
+    func presentAuthContoller() {
+        
+        //access repoviewcontroller as rootviewcontroller
+        if let repoViewController = self.window?.rootViewController as? RepoViewController, let storyboard = repoViewController.storyboard {
+            
+            //instantiate viewcontroller as githubauthcontroller
+            if let authViewController = storyboard.instantiateViewController(withIdentifier: GitHubAuthController.identifier) as? GitHubAuthController {
+                
+                //taking authviewcontroller's content and putting it on repoviewcontroller. 3 step process
+                repoViewController.addChildViewController(authViewController)
+                
+                repoViewController.view.addSubview(authViewController.view)
+                
+                authViewController.didMove(toParentViewController: repoViewController)
+                
+                self.authController = authViewController
+                self.repoController = repoViewController
+                
+            }
+        }
     }
     
     //only being called when coming back from a 3rd party url
@@ -31,10 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if accessToken == nil {
             GitHub.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
-                if success {
-                    print("Yay!! Access token :)")
-                } else {
-                    print("Bummer!! No success :(")
+                
+                if let authViewController = self.authController, let repoViewController = self.repoController {
+                    
+                    authViewController.dismissAuthController()
+                    repoViewController.update()
+                    
                 }
             }
         }

@@ -45,7 +45,7 @@ class GitHubAuthController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         
         //request OAuth
-        let parameters = ["scope" : "email,user"]
+        let parameters = ["scope" : "email,user,repo"]
         
         GitHub.shared.oAuthRequestWith(parameters: parameters)
         
@@ -57,4 +57,13 @@ class GitHubAuthController: UIViewController {
         UserDefaults.standard.removeObject(forKey: "access_token")
         updateUI()
     }
+    
+    //take view off parent view, and parent viewcontroller
+    func dismissAuthController() {
+        
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
+        
+    }
+    
 }
