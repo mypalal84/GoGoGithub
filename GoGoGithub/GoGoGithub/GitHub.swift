@@ -104,15 +104,15 @@ class GitHub {
                     
                     if let dataString = String(data: data, encoding: .utf8) {
                         
-                            //save access token to userdefaults
-                            if let token = self.accessTokenFrom(dataString) {
-                               complete(success: UserDefaults.standard.save(accessToken: token))
-                            
+                        //save access token to userdefaults
+                        if let token = self.accessTokenFrom(dataString) {
+                            if UserDefaults.standard.save(accessToken: token) {
                                 print("Saved successfully")
+                            }
                         }
                     }
                 }) .resume()//tells datatask to execute. most common bug in production(no feedback) have to do this!
-
+                
             }
         } catch {
             print(error)
@@ -180,7 +180,7 @@ class GitHub {
                 
             }
             
-        } .resume()
+            } .resume()
         
         
     }
