@@ -110,6 +110,7 @@ class GitHub {
                                 print("Saved successfully")
                             }
                         }
+                        complete(success: true)
                     }
                 }) .resume()//tells datatask to execute. most common bug in production(no feedback) have to do this!
                 
@@ -123,14 +124,12 @@ class GitHub {
     }
     
     func accessTokenFrom(_ string: String) -> String? {
-        print(string)
         
         if string.contains("access_token") {
             
             let components = string.components(separatedBy: "&")
             
             for component in components {
-                print(component)
                 if component.contains("access_token") {
                     let token = component.components(separatedBy: "=").last
                     
@@ -164,6 +163,8 @@ class GitHub {
                 
                 do {
                     if let rootJson = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String: Any]] {
+                        
+                        print(rootJson)
                         
                         for repositoryJSON in rootJson {
                             if let repo = Repository(json: repositoryJSON) {
