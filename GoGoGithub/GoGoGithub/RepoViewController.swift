@@ -49,6 +49,9 @@ extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepoCell", for: indexPath) as! RepoTableViewCell
         
         cell.repoNameLabel.text = repos[indexPath.row].name
+        cell.descriptionLabel.text = repos[indexPath.row].description
+        cell.languageLabel.text = repos[indexPath.row].language
+        
         
         return cell
     }
