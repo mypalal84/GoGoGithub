@@ -21,6 +21,7 @@
 		7FE9DBA61E9450E50068B2A3 /* github_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA31E9450E40068B2A3 /* github_logo.png */; };
 		7FE9DBA71E9450E50068B2A3 /* github_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA41E9450E40068B2A3 /* github_logo@2x.png */; };
 		7FE9DBA81E9450E50068B2A3 /* github_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA51E9450E40068B2A3 /* github_logo@3x.png */; };
+		7FE9DBAA1E9464F50068B2A3 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		7FE9DBA31E9450E40068B2A3 /* github_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = github_logo.png; path = "../../../../../../Downloads/ios 4/github_logo.png"; sourceTree = "<group>"; };
 		7FE9DBA41E9450E40068B2A3 /* github_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "github_logo@2x.png"; path = "../../../../../../Downloads/ios 4/github_logo@2x.png"; sourceTree = "<group>"; };
 		7FE9DBA51E9450E40068B2A3 /* github_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "github_logo@3x.png"; path = "../../../../../../Downloads/ios 4/github_logo@3x.png"; sourceTree = "<group>"; };
+		7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,8 @@
 				7FE9DB951E92C9180068B2A3 /* GitHub.swift */,
 				7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */,
 				7FE9DB9B1E92FCA40068B2A3 /* GitHubAccess.swift */,
+				7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */,
+				7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -100,7 +104,6 @@
 			children = (
 				7FE9DB891E92B07D0068B2A3 /* LaunchScreen.storyboard */,
 				7FE9DB841E92B07D0068B2A3 /* Main.storyboard */,
-				7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				7FE9DB961E92C9180068B2A3 /* GitHub.swift in Sources */,
 				7FE9DBA21E94195E0068B2A3 /* Repository.swift in Sources */,
 				7FE9DB9E1E940C100068B2A3 /* RepoViewController.swift in Sources */,
+				7FE9DBAA1E9464F50068B2A3 /* RepoTableViewCell.swift in Sources */,
 				7FE9DB981E92CE690068B2A3 /* GitHubAuthController.swift in Sources */,
 				7FE9DB811E92B07D0068B2A3 /* AppDelegate.swift in Sources */,
 				7FE9DB9C1E92FCA40068B2A3 /* GitHubAccess.swift in Sources */,

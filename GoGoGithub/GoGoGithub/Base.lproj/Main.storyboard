@@ -102,12 +102,57 @@
                     <view key="view" contentMode="scaleToFill" id="aPz-e2-whs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-GI-tHY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" textLabel="Sma-uF-QSR" style="IBUITableViewCellStyleDefault" id="3ZX-RA-XJk" customClass="RepoTableViewCell" customModule="GoGoGithub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ZX-RA-XJk" id="lCY-HH-sfv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sma-uF-QSR">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="repoNameLabel" destination="Sma-uF-QSR" id="WyZ-JG-ud5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xM5-yL-Vap">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eWE-GI-tHY" firstAttribute="top" secondItem="xM5-yL-Vap" secondAttribute="bottom" id="1sq-zf-Cjh"/>
+                            <constraint firstItem="xM5-yL-Vap" firstAttribute="leading" secondItem="aPz-e2-whs" secondAttribute="leading" id="3Zl-S6-xnn"/>
+                            <constraint firstItem="eWE-GI-tHY" firstAttribute="leading" secondItem="aPz-e2-whs" secondAttribute="leading" id="8t2-aM-JgD"/>
+                            <constraint firstItem="cBO-7K-YQc" firstAttribute="top" secondItem="eWE-GI-tHY" secondAttribute="bottom" id="9Bz-Zi-q60"/>
+                            <constraint firstAttribute="trailing" secondItem="eWE-GI-tHY" secondAttribute="trailing" id="B52-P8-jy6"/>
+                            <constraint firstItem="xM5-yL-Vap" firstAttribute="top" secondItem="nmv-p5-xIG" secondAttribute="bottom" id="Sb3-CG-xnQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xM5-yL-Vap" secondAttribute="trailing" id="kMZ-VS-g5f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="xM5-yL-Vap" id="yiZ-gw-xF1"/>
+                        <outlet property="tableView" destination="eWE-GI-tHY" id="XnN-j8-3rn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LC-dy-d1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="139"/>
+            <point key="canvasLocation" x="964" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

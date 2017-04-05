@@ -163,15 +163,13 @@ class GitHub {
                 
                 do {
                     if let rootJson = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String: Any]] {
-                        
-                        print(rootJson)
-                        
+                                                
                         for repositoryJSON in rootJson {
                             if let repo = Repository(json: repositoryJSON) {
                                 repositories.append(repo)
+                                print("\(repositories.count)")
                             }
                         }
-                        
                         returnToMain(results: repositories)
                     }
                     
@@ -181,9 +179,7 @@ class GitHub {
                 
             }
             
-            } .resume()
-        
-        
+        } .resume()
     }
     
 }
