@@ -163,3 +163,4 @@ playground.xcworkspace
 # End of https://www.gitignore.io/api/swift,objective-c,macos,xcode
 
 GitHubAccess.swift
+GoGoGithub/GoGoGithub/GitHubAccess.swift
