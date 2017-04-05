@@ -30,6 +30,12 @@ class RepoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // initialize your nib
+        let repoXib = UINib(nibName: RepoTableViewCell.identifier, bundle: Bundle.main)
+        // register your cell xib file
+        self.tableView.register(repoXib, forCellReuseIdentifier: RepoTableViewCell.identifier)
+        
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
@@ -79,7 +85,7 @@ extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoCell", for: indexPath) as! RepoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
         cell.repoNameLabel.text = displayRepos?[indexPath.row].name ?? repos[indexPath.row].name
         cell.descriptionLabel.text = displayRepos?[indexPath.row].description ?? repos[indexPath.row].description

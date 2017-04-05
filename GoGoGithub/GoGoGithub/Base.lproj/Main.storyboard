@@ -111,62 +111,6 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoCell" rowHeight="125" id="3ZX-RA-XJk" customClass="RepoTableViewCell" customModule="GoGoGithub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="125"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ZX-RA-XJk" id="lCY-HH-sfv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMf-nO-Uxd">
-                                                    <rect key="frame" x="16" y="54" width="343" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Gu5-UR-u49"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qh-HV-ulc">
-                                                    <rect key="frame" x="16" y="16" width="343" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="w1D-oM-gUY"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUX-6z-cS8">
-                                                    <rect key="frame" x="16" y="92" width="343" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Tec-D1-UGs"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="IUX-6z-cS8" firstAttribute="leading" secondItem="lCY-HH-sfv" secondAttribute="leadingMargin" constant="8" id="048-lb-v8p"/>
-                                                <constraint firstItem="IUX-6z-cS8" firstAttribute="top" secondItem="pMf-nO-Uxd" secondAttribute="bottom" constant="8" id="LXP-cm-iKQ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4Qh-HV-ulc" secondAttribute="trailing" constant="8" id="MMI-oz-u1m"/>
-                                                <constraint firstItem="pMf-nO-Uxd" firstAttribute="leading" secondItem="lCY-HH-sfv" secondAttribute="leadingMargin" constant="8" id="RHY-Pa-vUk"/>
-                                                <constraint firstItem="4Qh-HV-ulc" firstAttribute="top" secondItem="lCY-HH-sfv" secondAttribute="topMargin" constant="8" id="jD0-ol-a9p"/>
-                                                <constraint firstItem="pMf-nO-Uxd" firstAttribute="top" secondItem="4Qh-HV-ulc" secondAttribute="bottom" constant="8" id="lrJ-lb-GTA"/>
-                                                <constraint firstItem="4Qh-HV-ulc" firstAttribute="leading" secondItem="lCY-HH-sfv" secondAttribute="leadingMargin" constant="8" id="uwc-D1-dpv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="IUX-6z-cS8" secondAttribute="trailing" constant="8" id="y1V-tx-h7I"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pMf-nO-Uxd" secondAttribute="trailing" constant="8" id="zqe-L9-9V1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="descriptionLabel" destination="pMf-nO-Uxd" id="rnQ-wN-3ES"/>
-                                            <outlet property="languageLabel" destination="IUX-6z-cS8" id="41p-QN-l3N"/>
-                                            <outlet property="repoNameLabel" destination="4Qh-HV-ulc" id="WeN-rg-5nr"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
