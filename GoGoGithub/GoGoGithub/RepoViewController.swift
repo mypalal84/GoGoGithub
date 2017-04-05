@@ -58,6 +58,8 @@ class RepoViewController: UIViewController {
     }
 }
 
+//MARK: UIViewControllerTransitioningDelegate
+
 extension RepoViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -92,6 +94,8 @@ extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
         self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
     }
 }
+
+//MARK: UISearchBarDelegate
 
 extension RepoViewController: UISearchBarDelegate {
     
