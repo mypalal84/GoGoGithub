@@ -167,7 +167,7 @@ class GitHub {
                         for repositoryJSON in rootJson {
                             if let repo = Repository(json: repositoryJSON) {
                                 repositories.append(repo)
-                                print("\(repositories.count)")
+//                                print("\(repositories.count)")
                             }
                         }
                         returnToMain(results: repositories)
