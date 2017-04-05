@@ -33,7 +33,6 @@ class RepoViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
-        // Do any additional setup after loading the view.
         update()
     }
     
@@ -43,11 +42,32 @@ class RepoViewController: UIViewController {
             //update tableView
             guard let repositories = repositories else { return }
                 self.repos = repositories
-//                self.tableView.reloadData()
+                //self.tableView.reloadData()
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == RepoDetailViewController.identifier {
+            
+            segue.destination.transitioningDelegate = self
             
         }
     }
 }
+
+extension RepoViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return CustomTransition(duration: 1.0)
+        
+    }
+}
+
+
 //MARK: UITableViewDelegate
 
 extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
@@ -66,6 +86,10 @@ extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
     }
 }
 
@@ -91,5 +115,4 @@ extension RepoViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.resignFirstResponder()
     }
-    
 }

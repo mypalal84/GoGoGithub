@@ -15,5 +15,4 @@ extension UIResponder {
         return String(describing: self)
         
     }
-    
 }

@@ -45,7 +45,6 @@ class GitHub {
             let queryItem = URLQueryItem(name: "access_token", value: token)
             self.components.queryItems = [queryItem]
         }
-        
     }
     
     //requesting OAuth, opens login window
@@ -119,8 +118,6 @@ class GitHub {
             print(error)
             complete(success: false)
         }
-        
-        
     }
     
     func accessTokenFrom(_ string: String) -> String? {
@@ -167,7 +164,7 @@ class GitHub {
                         for repositoryJSON in rootJson {
                             if let repo = Repository(json: repositoryJSON) {
                                 repositories.append(repo)
-//                                print("\(repositories.count)")
+                                //print("\(repositories.count)")
                             }
                         }
                         returnToMain(results: repositories)
@@ -176,23 +173,8 @@ class GitHub {
                 } catch {
                     
                 }
-                
             }
             
         } .resume()
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

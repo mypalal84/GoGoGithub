@@ -23,5 +23,4 @@ extension UserDefaults {
         UserDefaults.standard.set(accessToken, forKey: "access_token")
         return UserDefaults.standard.synchronize()
     }
-    
 }
