@@ -24,7 +24,7 @@ class Repository {
             self.name = name
             self.numberOfStars = numberOfStars
             self.isFork = isFork
-            self.createdAt = createdAt
+            self.createdAt = createdAt.components(separatedBy: "T").first!
             
             if let description = json["description"] as? String {
                 self.description = description
