@@ -40,12 +40,6 @@ class GitHub {
         
         self.components.scheme = "https"
         self.components.host = "api.github.com"
-        
-        if let token = UserDefaults.standard.getAccessToken() {
-            let queryItem = URLQueryItem(name: "access_token", value: token)
-            self.components.queryItems = [queryItem]
-        }
-        
     }
     
     //requesting OAuth, opens login window
@@ -119,8 +113,6 @@ class GitHub {
             print(error)
             complete(success: false)
         }
-        
-        
     }
     
     func accessTokenFrom(_ string: String) -> String? {
@@ -151,6 +143,11 @@ class GitHub {
         
         self.components.path = "/user/repos"
         
+        if let token = UserDefaults.standard.getAccessToken() {
+            let queryItem = URLQueryItem(name: "access_token", value: token)
+            self.components.queryItems = [queryItem]
+        }
+        
         guard let url = self.components.url else { returnToMain(results: nil); return }
         
         self.session.dataTask(with: url) { (data, response, error) in
@@ -167,7 +164,6 @@ class GitHub {
                         for repositoryJSON in rootJson {
                             if let repo = Repository(json: repositoryJSON) {
                                 repositories.append(repo)
-//                                print("\(repositories.count)")
                             }
                         }
                         returnToMain(results: repositories)
@@ -176,23 +172,8 @@ class GitHub {
                 } catch {
                     
                 }
-                
             }
             
         } .resume()
     }
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -65,5 +65,4 @@ class GitHubAuthController: UIViewController {
         self.removeFromParentViewController()
         
     }
-    
 }

@@ -30,10 +30,16 @@ class RepoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // initialize your nib
+        let repoXib = UINib(nibName: RepoTableViewCell.identifier, bundle: Bundle.main)
+        // register your cell xib file
+        self.tableView.register(repoXib, forCellReuseIdentifier: RepoTableViewCell.identifier)
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
-        // Do any additional setup after loading the view.
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         update()
     }
     
@@ -43,11 +49,39 @@ class RepoViewController: UIViewController {
             //update tableView
             guard let repositories = repositories else { return }
                 self.repos = repositories
-//                self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let destination = segue.destination as? RepoDetailViewController else {
+            return
+        }
+        
+        if segue.identifier == RepoDetailViewController.identifier {
             
+            destination.transitioningDelegate = self
+            if let selectedIndex = self.tableView.indexPathForSelectedRow {
+
+                destination.repo = self.repos[selectedIndex.row]
+            }
         }
     }
 }
+
+//MARK: UIViewControllerTransitioningDelegate
+
+extension RepoViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return CustomTransition(duration: 1.0)
+        
+    }
+}
+
+
 //MARK: UITableViewDelegate
 
 extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
@@ -57,7 +91,7 @@ extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoCell", for: indexPath) as! RepoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
         cell.repoNameLabel.text = displayRepos?[indexPath.row].name ?? repos[indexPath.row].name
         cell.descriptionLabel.text = displayRepos?[indexPath.row].description ?? repos[indexPath.row].description
@@ -67,7 +101,13 @@ extension RepoViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
+    }
 }
+
+//MARK: UISearchBarDelegate
 
 extension RepoViewController: UISearchBarDelegate {
     
@@ -91,5 +131,4 @@ extension RepoViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.resignFirstResponder()
     }
-    
 }
