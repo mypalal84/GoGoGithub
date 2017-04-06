@@ -11,6 +11,7 @@
 		7FA235741E959CDC00560DA1 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA235731E959CDC00560DA1 /* RepoDetailViewController.swift */; };
 		7FA235761E95A03E00560DA1 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA235751E95A03E00560DA1 /* CustomTransition.swift */; };
 		7FA235781E95ADFD00560DA1 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA235771E95ADFD00560DA1 /* RepoTableViewCell.xib */; };
+		7FA2357A1E96B33C00560DA1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA235791E96B33C00560DA1 /* WebViewController.swift */; };
 		7FE9DB811E92B07D0068B2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB801E92B07D0068B2A3 /* AppDelegate.swift */; };
 		7FE9DB861E92B07D0068B2A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DB841E92B07D0068B2A3 /* Main.storyboard */; };
 		7FE9DB881E92B07D0068B2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DB871E92B07D0068B2A3 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		7FA235731E959CDC00560DA1 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		7FA235751E95A03E00560DA1 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		7FA235771E95ADFD00560DA1 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		7FA235791E96B33C00560DA1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7FE9DB7D1E92B07D0068B2A3 /* GoGoGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoGoGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE9DB801E92B07D0068B2A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FE9DB851E92B07D0068B2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,7 +100,6 @@
 				7FE9DB801E92B07D0068B2A3 /* AppDelegate.swift */,
 				7FE9DB951E92C9180068B2A3 /* GitHub.swift */,
 				7FE9DB971E92CE690068B2A3 /* GitHubAuthController.swift */,
-				7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -110,7 +111,9 @@
 				7FE9DB841E92B07D0068B2A3 /* Main.storyboard */,
 				7FA235771E95ADFD00560DA1 /* RepoTableViewCell.xib */,
 				7FA235731E959CDC00560DA1 /* RepoDetailViewController.swift */,
+				7FA235791E96B33C00560DA1 /* WebViewController.swift */,
 				7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */,
+				7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				7FE9DBA21E94195E0068B2A3 /* Repository.swift in Sources */,
 				7FA235721E95913000560DA1 /* GitHubAccess.swift in Sources */,
 				7FE9DB9E1E940C100068B2A3 /* RepoViewController.swift in Sources */,
+				7FA2357A1E96B33C00560DA1 /* WebViewController.swift in Sources */,
 				7FE9DBAA1E9464F50068B2A3 /* RepoTableViewCell.swift in Sources */,
 				7FA235741E959CDC00560DA1 /* RepoDetailViewController.swift in Sources */,
 				7FE9DB981E92CE690068B2A3 /* GitHubAuthController.swift in Sources */,
