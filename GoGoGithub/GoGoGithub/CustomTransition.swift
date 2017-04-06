@@ -12,7 +12,7 @@ class CustomTransition : NSObject, UIViewControllerAnimatedTransitioning {
     
     var duration: TimeInterval
     
-    init(duration: TimeInterval = 0.5) {
+    init(duration: TimeInterval = 0.4) {
         self.duration = duration
     }
     

@@ -47,4 +47,13 @@ class RepoDetailViewController: UIViewController {
             self.dateLabel.text = "Date Created: \(repo.createdAt)"
         }
     }
+    
+    
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
