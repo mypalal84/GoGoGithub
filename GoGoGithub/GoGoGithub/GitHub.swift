@@ -40,8 +40,6 @@ class GitHub {
         
         self.components.scheme = "https"
         self.components.host = "api.github.com"
-        
-        
     }
     
     //requesting OAuth, opens login window
@@ -166,7 +164,6 @@ class GitHub {
                         for repositoryJSON in rootJson {
                             if let repo = Repository(json: repositoryJSON) {
                                 repositories.append(repo)
-                                //print("\(repositories.count)")
                             }
                         }
                         returnToMain(results: repositories)

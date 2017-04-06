@@ -35,10 +35,11 @@ class RepoViewController: UIViewController {
         // register your cell xib file
         self.tableView.register(repoXib, forCellReuseIdentifier: RepoTableViewCell.identifier)
         
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         update()
     }
     
@@ -48,18 +49,23 @@ class RepoViewController: UIViewController {
             //update tableView
             guard let repositories = repositories else { return }
                 self.repos = repositories
-                //self.tableView.reloadData()
-            
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
+        guard let destination = segue.destination as? RepoDetailViewController else {
+            return
+        }
+        
         if segue.identifier == RepoDetailViewController.identifier {
             
-            segue.destination.transitioningDelegate = self
-            
+            destination.transitioningDelegate = self
+            if let selectedIndex = self.tableView.indexPathForSelectedRow {
+
+                destination.repo = self.repos[selectedIndex.row]
+            }
         }
     }
 }
