@@ -18,6 +18,8 @@ class Repository {
     let description: String?
     let language: String?
     
+    let repoURLString: String
+    
     init?(json: [String: Any]) {
         
         if let name = json["name"] as? String, let numberOfStars = json["stargazers_count"] as? Int, let isFork = json["fork"] as? Bool, let createdAt = json["created_at"] as? String {
@@ -25,6 +27,8 @@ class Repository {
             self.numberOfStars = numberOfStars
             self.isFork = isFork
             self.createdAt = createdAt.components(separatedBy: "T").first!
+            
+            self.repoURLString = json["html_url"] as? String ?? "https://github.com"
             
             if let description = json["description"] as? String {
                 self.description = description
