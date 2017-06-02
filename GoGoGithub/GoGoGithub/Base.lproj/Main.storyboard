@@ -22,22 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJI-bA-Mil">
-                                <rect key="frame" x="16" y="572" width="343" height="75"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="QfZ-1s-5MD"/>
-                                </constraints>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jec-hN-e7h"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-Gy-aGc">
-                                <rect key="frame" x="126" y="489" width="123" height="75"/>
+                                <rect key="frame" x="16" y="572" width="343" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="hEQ-R6-Wlh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="LOGOUT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,34 +43,32 @@
                                     <constraint firstAttribute="width" constant="200" id="Y6z-jK-0Tw"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-tY-ZQZ">
-                                <rect key="frame" x="16" y="80" width="343" height="75"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="PRINT TOKEN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJI-bA-Mil">
+                                <rect key="frame" x="16" y="489" width="343" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="YUk-79-PcJ"/>
+                                </constraints>
+                                <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2H-al-5gI"/>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jec-hN-e7h"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0RB-qr-muF"/>
-                            <constraint firstAttribute="trailing" secondItem="bpa-tY-ZQZ" secondAttribute="trailing" constant="16" id="55o-3m-vWa"/>
-                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="height" secondItem="wJI-bA-Mil" secondAttribute="height" id="5qL-4s-osb"/>
-                            <constraint firstItem="wJI-bA-Mil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="BGY-hQ-Gaw"/>
-                            <constraint firstAttribute="trailing" secondItem="wJI-bA-Mil" secondAttribute="trailing" constant="16" id="FoP-i3-c5l"/>
-                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="110" id="GgX-uu-xZV"/>
+                            <constraint firstItem="wJI-bA-Mil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="HHF-4P-ubp"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IPs-4b-IVv"/>
+                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Nk5-fS-o98"/>
+                            <constraint firstAttribute="trailing" secondItem="wJI-bA-Mil" secondAttribute="trailing" constant="16" id="WGz-h2-pA1"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YCC-tR-wxl"/>
-                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="f9U-I2-Ob5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S1x-Gy-aGc" secondAttribute="trailing" constant="110" id="hXx-cV-afU"/>
-                            <constraint firstItem="wJI-bA-Mil" firstAttribute="top" secondItem="S1x-Gy-aGc" secondAttribute="bottom" constant="8" id="kw3-PS-t5y"/>
-                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="height" secondItem="S1x-Gy-aGc" secondAttribute="height" id="m3I-Tz-wl8"/>
-                            <constraint firstItem="bpa-tY-ZQZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="pU1-et-Xa0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wJI-bA-Mil" secondAttribute="bottom" constant="20" id="qI7-be-usU"/>
+                            <constraint firstAttribute="trailing" secondItem="S1x-Gy-aGc" secondAttribute="trailing" constant="16" id="ert-nH-rT1"/>
+                            <constraint firstItem="S1x-Gy-aGc" firstAttribute="top" secondItem="wJI-bA-Mil" secondAttribute="bottom" constant="8" id="rTX-fJ-cy8"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="reN-bh-ezI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S1x-Gy-aGc" secondAttribute="bottom" constant="20" id="sDm-Pi-vwX"/>
                         </constraints>
                     </view>
                     <connections>
