@@ -22,9 +22,6 @@
 		7FE9DB9E1E940C100068B2A3 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */; };
 		7FE9DBA01E940D5D0068B2A3 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DB9F1E940D5D0068B2A3 /* UIExtensions.swift */; };
 		7FE9DBA21E94195E0068B2A3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA11E94195E0068B2A3 /* Repository.swift */; };
-		7FE9DBA61E9450E50068B2A3 /* github_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA31E9450E40068B2A3 /* github_logo.png */; };
-		7FE9DBA71E9450E50068B2A3 /* github_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA41E9450E40068B2A3 /* github_logo@2x.png */; };
-		7FE9DBA81E9450E50068B2A3 /* github_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA51E9450E40068B2A3 /* github_logo@3x.png */; };
 		7FE9DBAA1E9464F50068B2A3 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +43,6 @@
 		7FE9DB9D1E940C100068B2A3 /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
 		7FE9DB9F1E940D5D0068B2A3 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		7FE9DBA11E94195E0068B2A3 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		7FE9DBA31E9450E40068B2A3 /* github_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = github_logo.png; path = "../../../../../../Downloads/ios 4/github_logo.png"; sourceTree = "<group>"; };
-		7FE9DBA41E9450E40068B2A3 /* github_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "github_logo@2x.png"; path = "../../../../../../Downloads/ios 4/github_logo@2x.png"; sourceTree = "<group>"; };
-		7FE9DBA51E9450E40068B2A3 /* github_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "github_logo@3x.png"; path = "../../../../../../Downloads/ios 4/github_logo@3x.png"; sourceTree = "<group>"; };
 		7FE9DBA91E9464F50068B2A3 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,9 +80,6 @@
 				7FE9DB931E92B1510068B2A3 /* Views */,
 				7FE9DB921E92B14D0068B2A3 /* Controllers */,
 				7FE9DB871E92B07D0068B2A3 /* Assets.xcassets */,
-				7FE9DBA31E9450E40068B2A3 /* github_logo.png */,
-				7FE9DBA41E9450E40068B2A3 /* github_logo@2x.png */,
-				7FE9DBA51E9450E40068B2A3 /* github_logo@3x.png */,
 				7FE9DB8C1E92B07D0068B2A3 /* Info.plist */,
 			);
 			path = GoGoGithub;
@@ -193,9 +184,6 @@
 				7FE9DB8B1E92B07D0068B2A3 /* LaunchScreen.storyboard in Resources */,
 				7FA235781E95ADFD00560DA1 /* RepoTableViewCell.xib in Resources */,
 				7FE9DB881E92B07D0068B2A3 /* Assets.xcassets in Resources */,
-				7FE9DBA81E9450E50068B2A3 /* github_logo@3x.png in Resources */,
-				7FE9DBA71E9450E50068B2A3 /* github_logo@2x.png in Resources */,
-				7FE9DBA61E9450E50068B2A3 /* github_logo.png in Resources */,
 				7FE9DB861E92B07D0068B2A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

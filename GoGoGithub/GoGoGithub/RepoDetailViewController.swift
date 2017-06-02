@@ -24,19 +24,19 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     var repo: Repository?
-//    {
-//        didSet {
-//            if let repo = repo {
-//                self.repoNameLabel.text = repo.name
-//                self.repoDescriptionLabel.text = repo.description
-//                self.languageLabel.text = repo.language
-//                self.starsLabel.text = "Stars: \(repo.numberOfStars)"
-//                self.forkLabel.text = repo.isFork ? "Forked" : "Not forked"
-//                self.dateLabel.text = repo.createdAt
-//            }
-//        }
-//    }
-
+    //    {
+    //        didSet {
+    //            if let repo = repo {
+    //                self.repoNameLabel.text = repo.name
+    //                self.repoDescriptionLabel.text = repo.description
+    //                self.languageLabel.text = repo.language
+    //                self.starsLabel.text = "Stars: \(repo.numberOfStars)"
+    //                self.forkLabel.text = repo.isFork ? "Forked" : "Not forked"
+    //                self.dateLabel.text = repo.createdAt
+    //            }
+    //        }
+    //    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let repo = repo {
@@ -62,18 +62,18 @@ class RepoDetailViewController: UIViewController {
         guard let repo = repo else { return }
         
         presentSafariViewControllerWith(urlString: repo.repoURLString)
-//        presentWebViewControllerWith(urlString: repo.repoURLString)
+        //        presentWebViewControllerWith(urlString: repo.repoURLString)
         
     }
     
-        func presentSafariViewControllerWith(urlString: String) {
-            
-            guard let url = URL(string: urlString) else { return }
-            
-            let safariController = SFSafariViewController(url: url)
-            
-            self.present(safariController, animated: true, completion: nil)
-            
+    func presentSafariViewControllerWith(urlString: String) {
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        let safariController = SFSafariViewController(url: url)
+        
+        self.present(safariController, animated: true, completion: nil)
+        
     }
     
     func presentWebViewControllerWith(urlString: String) {
@@ -84,5 +84,4 @@ class RepoDetailViewController: UIViewController {
         self.present(webController, animated: true, completion: nil)
         
     }
-    
 }
