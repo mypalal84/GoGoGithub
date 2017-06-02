@@ -33,14 +33,6 @@ class GitHubAuthController: UIViewController {
         }
     }
     
-    @IBAction func printTokenPressed(_ sender: Any) {
-        
-        //print accessToken
-        let accessToken = UserDefaults.standard.getAccessToken()
-        
-        print("Access Token: \(String(describing: accessToken))")
-        
-    }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         
