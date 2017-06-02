@@ -56,18 +56,17 @@
                                     <constraint firstAttribute="width" constant="200" id="Y6z-jK-0Tw"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoGo" translatesAutoresizingMaskIntoConstraints="NO" id="Urf-gW-0zE">
-                                <rect key="frame" x="99" y="36" width="177" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubBlack" translatesAutoresizingMaskIntoConstraints="NO" id="he5-5t-aWP">
+                                <rect key="frame" x="147" y="111" width="82" height="114"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="Ecf-bw-yVq"/>
-                                    <constraint firstAttribute="height" constant="100" id="PWg-vQ-dDN"/>
+                                    <constraint firstAttribute="width" constant="82" id="Uo2-ad-pKN"/>
+                                    <constraint firstAttribute="height" constant="114" id="oKV-UJ-bnI"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubBlack" translatesAutoresizingMaskIntoConstraints="NO" id="he5-5t-aWP">
-                                <rect key="frame" x="137" y="111" width="100" height="114"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoGo" translatesAutoresizingMaskIntoConstraints="NO" id="Urf-gW-0zE">
+                                <rect key="frame" x="98" y="69" width="178" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Uo2-ad-pKN"/>
-                                    <constraint firstAttribute="height" constant="114" id="oKV-UJ-bnI"/>
+                                    <constraint firstAttribute="height" constant="100" id="Qw4-Mb-qr1"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -76,19 +75,21 @@
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0RB-qr-muF"/>
                             <constraint firstItem="wJI-bA-Mil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="HHF-4P-ubp"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IPs-4b-IVv"/>
-                            <constraint firstItem="Urf-gW-0zE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="N2F-oE-E2p"/>
+                            <constraint firstAttribute="trailing" secondItem="Urf-gW-0zE" secondAttribute="trailing" constant="99" id="MD7-bR-WaO"/>
                             <constraint firstItem="S1x-Gy-aGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Nk5-fS-o98"/>
-                            <constraint firstItem="Urf-gW-0zE" firstAttribute="centerX" secondItem="he5-5t-aWP" secondAttribute="centerX" id="VPJ-IP-oFg"/>
+                            <constraint firstItem="Urf-gW-0zE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="TsO-L0-rCD"/>
                             <constraint firstAttribute="trailing" secondItem="wJI-bA-Mil" secondAttribute="trailing" constant="16" id="WGz-h2-pA1"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YCC-tR-wxl"/>
+                            <constraint firstItem="Urf-gW-0zE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="ZV9-Ee-g4I"/>
                             <constraint firstAttribute="trailing" secondItem="S1x-Gy-aGc" secondAttribute="trailing" constant="16" id="ert-nH-rT1"/>
-                            <constraint firstItem="Urf-gW-0zE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="99" id="glf-UB-7ia"/>
-                            <constraint firstItem="he5-5t-aWP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="137" id="l2q-7f-0PO"/>
-                            <constraint firstAttribute="trailing" secondItem="Urf-gW-0zE" secondAttribute="trailing" constant="99" id="pqh-qU-jyr"/>
+                            <constraint firstItem="Urf-gW-0zE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="98" id="j4g-NV-wuf"/>
+                            <constraint firstItem="he5-5t-aWP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="147" id="l2q-7f-0PO"/>
+                            <constraint firstItem="Urf-gW-0zE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="98" id="mH1-mg-9bX"/>
                             <constraint firstItem="S1x-Gy-aGc" firstAttribute="top" secondItem="wJI-bA-Mil" secondAttribute="bottom" constant="8" id="rTX-fJ-cy8"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="reN-bh-ezI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S1x-Gy-aGc" secondAttribute="bottom" constant="20" id="sDm-Pi-vwX"/>
-                            <constraint firstAttribute="trailing" secondItem="he5-5t-aWP" secondAttribute="trailing" constant="138" id="xCU-wZ-3aE"/>
+                            <constraint firstAttribute="trailing" secondItem="Urf-gW-0zE" secondAttribute="trailing" constant="99" id="t2p-zm-ZWD"/>
+                            <constraint firstAttribute="trailing" secondItem="he5-5t-aWP" secondAttribute="trailing" constant="146" id="xCU-wZ-3aE"/>
                             <constraint firstItem="F9j-xh-SPA" firstAttribute="top" secondItem="he5-5t-aWP" secondAttribute="bottom" constant="8" id="yaa-P6-2Ly"/>
                         </constraints>
                     </view>
